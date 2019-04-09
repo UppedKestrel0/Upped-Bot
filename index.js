@@ -29,24 +29,7 @@ bot.on("message", async message => {
   if(message.channel.type === "dm") return;
   if (!message.content.startsWith(config.prefix)) return;
 
-  if(!coins[message.author.id]){
-    coins[message.author.id] = {
-      coins: 0
-    };
-  }
-
-  let coinAmt = Math.floor(Math.random() * 1) + 1;
-  let baseAmt = Math.floor(Math.random() * 1) + 1;
-  console.log(`${coinAmt} ; ${baseAmt}`);
-
-  if(coinAmt === baseAmt){
-    coins[message.author.id] = {
-      coins: coins[message.author.id].coins + coinAmt
-    };
-  fs.writeFile("./coins.json", JSON.stringify(coins), (err) => {
-    if (err) console.log(err);
   });
-  }
 
   let prefix = ("!");
   let messageArray = message.content.split(" ");
