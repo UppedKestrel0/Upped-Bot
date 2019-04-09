@@ -58,7 +58,7 @@ bot.on("message", async message => {
     .setThumbnail(bicon)
     .addField("Bot Name", bot.user.username)
     .addField("Bot Job", "To assist in moderating this Discord.")
-    .addField("Bot Creator", "UppedKestrel0#9421");
+    .addField("Bot Creator", "@UppedKestrel0#9421");
 
     message.delete().catch(O_o=> {});
 
