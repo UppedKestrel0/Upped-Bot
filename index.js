@@ -144,4 +144,4 @@ bot.on('ready', async () => {
 });
 
 bot.on('error', error => { console.log(error) });
-bot.login(config.token);
+bot.login(token);
