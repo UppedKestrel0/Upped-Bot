@@ -54,7 +54,7 @@ bot.on("message", async message => {
     let botembed = new Discord.RichEmbed()
     .setTitle("**Bot Information**")
     .setColor("#00ff23")
-    .setThumbnail("https://cdn.discordapp.com/attachments/561103167606095893/565017085340680221/dab.png")
+    .setThumbnail("https://cdn.discordapp.com/avatars/561093941139603466/65d7ae1b256909d2286fcf3ba9a647fd.png?size=256&quot")
     .addField("Bot Name", bot.user.username)
     .addField("Bot Job", "To assist in moderating this Discord.")
     .addField("Bot Creator", "@UppedKestrel0#9421");
