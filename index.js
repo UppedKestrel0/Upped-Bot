@@ -51,11 +51,10 @@ bot.on("message", async message => {
 
   if(cmd === `${prefix}botinfo`){
 
-    let bicon = bot.user.displayAvatarURL
     let botembed = new Discord.RichEmbed()
     .setTitle("**Bot Information**")
     .setColor("#00ff23")
-    .setThumbnail(bicon)
+    .setThumbnail("https://cdn.discordapp.com/attachments/561103167606095893/565017085340680221/dab.png")
     .addField("Bot Name", bot.user.username)
     .addField("Bot Job", "To assist in moderating this Discord.")
     .addField("Bot Creator", "@UppedKestrel0#9421");
