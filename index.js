@@ -51,7 +51,7 @@ bot.on("message", async message => {
 
   if(cmd === `${prefix}botinfo`){
 
-    let bicon = message.author.displayAvatarURL
+    let bicon = bot.user.displayAvatarURL
     let botembed = new Discord.RichEmbed()
     .setTitle("**Bot Information**")
     .setColor("#00ff23")
