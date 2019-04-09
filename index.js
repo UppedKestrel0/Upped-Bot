@@ -5,7 +5,6 @@ const fs = require("fs");
 const colors = require("colors");
 const Token = process.env.token;
 let profanities = ["fuck", "nigger", "cunt", "bitch", "asshole", "nigga", "tits", "sex", " https://discord.gg/", "https://", "http://", "porn"];
-let coins = require("./coins.json");
 
 //COMMAND HANDLER
 bot.commands = new Discord.Collection();
