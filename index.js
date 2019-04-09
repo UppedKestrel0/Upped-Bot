@@ -111,7 +111,6 @@ bot.on("message", async message => {
     let reply = args.join(" ");
     let announcementChannel = message.guild.channels.find(channel => channel.name === "announcements");
     if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("You are lacking the required permissions to run this command.");
-    message.delete().catch(O_o=> {});
 
     return announcementChannel.send(reply);
   }
