@@ -5,6 +5,7 @@ const fs = require("fs");
 const colors = require("colors");
 const Token = process.env.token;
 let profanities = ["fuck", "nigger", "cunt", "bitch", "asshole", "nigga", "tits", "sex", " https://discord.gg/", "https://", "http://", "porn"];
+let coins = require("./coins.json");
 
 //COMMAND HANDLER
 bot.commands = new Discord.Collection();
@@ -27,6 +28,25 @@ bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
   if (!message.content.startsWith(config.prefix)) return;
+
+  if(!coins[message.author.id]){
+    coins[message.author.id] = {
+      coins: 0
+    };
+  }
+
+  let coinAmt = Math.floor(Math.random() * 1) + 1;
+  let baseAmt = Math.floor(Math.random() * 1) + 1;
+  console.log(`${coinAmt} ; ${baseAmt}`);
+
+  if(coinAmt === baseAmt){
+    coins[message.author.id] = {
+      coins: coins[message.author.id].coins + coinAmt
+    };
+  fs.writeFile("./coins.json", JSON.stringify(coins), (err) => {
+    if (err) console.log(err);
+  });
+  }
 
   let prefix = ("!");
   let messageArray = message.content.split(" ");
