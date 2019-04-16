@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
 
-    let priority = message.args.find(args[1]);
+    let priority = args[1];
     let change = args.slice(1).join(" ");
 
     let changelogEmbed = new Discord.RichEmbed()
@@ -13,7 +13,7 @@ module.exports.run = async(bot, message, args) => {
 
     let changelogChannel = message.guild.channels.find(`name`, "changelog");
     message.delete().catch(O_o=> {});
-    
+
     changelogChannel.send(changelogEmbed);
 };
 
