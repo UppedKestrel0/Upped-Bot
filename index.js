@@ -3,7 +3,7 @@ const config = require("./config.json");
 const bot = new Discord.Client();
 const fs = require("fs");
 const colors = require("colors");
-const Token = ("NTYxMDkzOTQxMTM5NjAzNDY2.XLWT-g.5HzGFzByvTzPsZAh-iCgL7zRkF8");
+const Token = process.env.token;
 let profanities = ["fuck", "nigger", "cunt", "bitch", "asshole", "nigga", "tits", "sex", " https://discord.gg/", "https://", "http://", "porn"];
 
 //COMMAND HANDLER
