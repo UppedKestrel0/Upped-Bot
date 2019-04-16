@@ -10,6 +10,7 @@ module.exports.run = async(bot, message, args) => {
     .addField("Change", change);
 
     let changelogChannel = message.guild.channels.find(`name`, "changelog");
+    if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("You are lacking the required permissions to run this command.");
     message.delete().catch(O_o=> {});
 
     changelogChannel.send(changelogEmbed);
