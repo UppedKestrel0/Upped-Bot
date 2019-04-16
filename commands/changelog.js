@@ -2,8 +2,8 @@ const Discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
 
-    let priority = args.slice(1).join(" ");
-    let change = args.slice(0).join(" ");
+    let priority = message.args[1];
+    let change = args.slice(1).join(" ");
 
     let changelogEmbed = new Discord.RichEmbed()
     .setTitle("**NEW LOG**")
