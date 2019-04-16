@@ -33,6 +33,11 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
 
+  if(cmd === `${prefix}sleepytime`){
+    message.guild.channels.get("528658707500761127").send("Goodnight everyone! :sleeping: :sleeping_accommodation:");
+    message.delete().catch(O_o=> {});
+  };
+
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
   });
