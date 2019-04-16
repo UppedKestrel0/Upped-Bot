@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-const superagent = require("superagent");
 
 module.exports.run = async(bot, message, args) => {
 
@@ -8,7 +7,7 @@ module.exports.run = async(bot, message, args) => {
     let pugpowerEmbed = new Discord.RichEmbed()
     .setTitle("**PUG POWER!**")
     .setColor("#7d00ff")
-    .setImage(image.file);
+    .setImage(image);
 
     message.channel.send(pugpowerEmbed);
 };

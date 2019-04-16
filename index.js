@@ -28,8 +28,6 @@ bot.on("message", async message => {
   if(message.channel.type === "dm") return;
   if (!message.content.startsWith(config.prefix)) return;
 
-  });
-
   let prefix = ("!");
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
@@ -130,6 +128,7 @@ bot.on("message", async message => {
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
+  });
 
 bot.on('guildMemberAdd', (guildMember) => {
   guildMember.addRole(guildMember.guild.roles.find(role => role.name === "Member"));
