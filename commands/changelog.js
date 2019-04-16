@@ -11,6 +11,8 @@ module.exports.run = async(bot, message, args) => {
     .addField("Change", change)
     .addField("Priority", priority);
 
+    let changelogChannel = message.guild.channels.find(`name`, "changelog");
+    changelogChannel.send(changelogEmbed);
 };
 
 module.exports.help = {
