@@ -12,6 +12,8 @@ module.exports.run = async(bot, message, args) => {
     .addField("Priority", priority);
 
     let changelogChannel = message.guild.channels.find(`name`, "changelog");
+    message.delete().catch(O_o=> {});
+    
     changelogChannel.send(changelogEmbed);
 };
 
