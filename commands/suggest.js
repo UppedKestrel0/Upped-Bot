@@ -3,8 +3,8 @@ const discord = require("discord.js");
 module.exports.run = async(bot, message, args) => {
 
     let suggestion = args.slice(0).join(" ");
-    let reactionA = message.guild.emojis.get("571485378993717249");
-    let reactionB = message.guild.emojis.get("571485462838116353");
+    let reactionA = message.guild.emojis.get("533967580227174412");
+    let reactionB = message.guild.emojis.get("534686684273442826");
 
     let suggestionEmbed = new discord.RichEmbed()
     .setTitle("**NEW SUGGESTION**")
