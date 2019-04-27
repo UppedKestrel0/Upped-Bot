@@ -31,7 +31,7 @@ module.exports.run = async (bot, message, args) => {
   let reason = args.join(" ").slice(22);
   let warnEmbed = new Discord.RichEmbed()
   .setTitle("**NEW WARNING**")
-  .setColor(red)
+  .setColor("#ff0000")
   .addField("Warned User", wUser)
   .addField("Warned by", message.author)
   .addField("Number of Warnings", warns[wUser.id].warns)
@@ -42,7 +42,7 @@ module.exports.run = async (bot, message, args) => {
  //DMing the player
   let WarnDM = new Discord.RichEmbed()
   .setTitle("**YOU HAVE RECIEVED A WARNING!**")
-  .setColor("#00ff23")
+  .setColor("#ff0000")
   .addField("Reason", reason)
   .addField("Warned by", message.author)
   .addField("Time of Warning", message.createdAt)

@@ -4,7 +4,7 @@ module.exports.run = async(bot, message, args) => {
 
     let helpembed = new Discord.RichEmbed()
     .setTitle("**List of Commands**")
-    .setColor(green)
+    .setColor("#008906")
     .addField("Command 1", "!serverinfo | DM's you some information about the Server.")
     .addField("Command 2", "!botinfo | DMs you some information about the bot.")
     .addField("Command 3", "!roll | Picks a random number between 1 and 6.")

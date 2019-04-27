@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
 
     let icon = message.author.displayAvatarURL
     let avatarembed = new Discord.RichEmbed()
-    .setColor(purple)
+    .setColor("#7f00e0")
     .setThumbnail(icon)
     .addField("Avatar of:", `<@${message.author.id}>`);
 
