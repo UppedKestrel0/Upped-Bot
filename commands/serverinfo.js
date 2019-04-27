@@ -5,7 +5,7 @@ module.exports.run = async(bot, message, args) => {
     let sicon = message.guild.iconURL
     let serverembed = new Discord.RichEmbed()
     .setTitle("**Server Information**")
-    .setColor("#00ff23")
+    .setColor(green)
     .setThumbnail(sicon)
     .addField("Server Name", message.guild.name)
     .addField("Server Info", "Limbo Realms is a new and upcoming MC server that will have 2 main gamemodes which will be: Skyblock and a surprise gamemode. :wink:")
@@ -18,5 +18,5 @@ module.exports.run = async(bot, message, args) => {
 };
 
 module.exports.help = {
-    name: "serverinfo"
+    name: "report"
 }

@@ -6,7 +6,7 @@ module.exports.run = async(bot, message, args) => {
 
     let pugpowerEmbed = new Discord.RichEmbed()
     .setTitle("**PUG POWER!**")
-    .setColor("#7d00ff")
+    .setColor(purple)
     .setImage(image);
 
     message.channel.send(pugpowerEmbed);

@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     let question = args.slice(1).join(" ");
 
     let rollEmbed = new Discord.RichEmbed()
-    .setColor("#7d00ff")
+    .setColor(purple)
     .addField("The Chosen Number!", replies[result]);
 
     return message.channel.send(rollEmbed);

@@ -6,7 +6,7 @@ module.exports.run = async(bot, message, args) => {
 
     let changelogEmbed = new Discord.RichEmbed()
     .setTitle("**NEW LOG**")
-    .setColor("#f1f433")
+    .setColor(yellow)
     .addField("Change", change);
 
     let changelogChannel = message.guild.channels.find(`name`, "changelog");

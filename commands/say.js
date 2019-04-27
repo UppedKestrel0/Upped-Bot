@@ -7,9 +7,9 @@ module.exports.run = async(bot, message, args) => {
     message.delete().catch(O_o=> {});
     
     return message.channel.send(reply);
-
+    
 };
 
 module.exports.help = {
-    name: "say"
+    name: "report"
 }

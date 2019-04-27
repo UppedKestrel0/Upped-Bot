@@ -2,7 +2,6 @@ const Discord = require("discord.js");
 const config = require("./config.json");
 const bot = new Discord.Client();
 const fs = require("fs");
-const colors = require("colors");
 const Token = process.env.token;
 let profanities = ["fuck", "nigger", "cunt", "bitch", "asshole", "nigga", "tits", "sex", " https://discord.gg/", "https://", "http://", "porn"];
 
@@ -29,14 +28,9 @@ bot.on("message", async message => {
   if (!message.content.startsWith(config.prefix)) return;
 
   let prefix = ("!");
-  let messageArray = message.content.split(" ");
+  let messageArray = message.content.split(" ")
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
-
-  if(cmd === `${prefix}sleepytime`){
-    message.guild.channels.get("528658707500761127").send("Goodnight everyone! :sleeping: :sleeping_accommodation:");
-    message.delete().catch(O_o=> {});
-  };
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
@@ -45,14 +39,14 @@ bot.on("message", async message => {
 bot.on('guildMemberAdd', (guildMember) => {
   guildMember.addRole(guildMember.guild.roles.find(role => role.name === "Member"));
 
-  guildMember.guild.channels.get("528370309531697173").send(`Welcome <@${guildMember.id}>`);
+  guildMember.guild.channels.get("529775651692216331").send(`Welcome <@${guildMember.id}>`);
 });
 
 //EVENTS
 bot.on('ready', async () => {
     console.log(`${bot.user.username} is online on ${bot.guilds.size} server/s!`)
 
-    bot.user.setActivity("Upped's Hangout Server | !help for a list of commands", {type: "PLAYING"});
+    bot.user.setActivity("Limbo Realms | !help for a list of commands", {type: "PLAYING"});
 });
 
 bot.on('error', error => { console.log(error) });

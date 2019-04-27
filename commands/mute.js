@@ -15,7 +15,7 @@ module.exports.run = async(bot, message, args) => {
     let reason = args.join(" ").slice(22);
     let muteEmbed = new Discord.RichEmbed()
     .setTitle("**Muted User**")
-    .setColor("#00ff23")
+    .setColor(red)
     .addField("Muted User", muser)
     .addField("Muted By", message.author)
     .addField("Duration of Mute", mutetime)
