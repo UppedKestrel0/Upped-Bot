@@ -39,14 +39,14 @@ bot.on("message", async message => {
 bot.on('guildMemberAdd', (guildMember) => {
   guildMember.addRole(guildMember.guild.roles.find(role => role.name === "Member"));
 
-  guildMember.guild.channels.get("529775651692216331").send(`Welcome <@${guildMember.id}>`);
+  guildMember.guild.channels.get("528370309531697173").send(`Welcome <@${guildMember.id}>`);
 });
 
 //EVENTS
 bot.on('ready', async () => {
     console.log(`${bot.user.username} is online on ${bot.guilds.size} server/s!`)
 
-    bot.user.setActivity("Limbo Realms | !help for a list of commands", {type: "PLAYING"});
+    bot.user.setActivity("Upped's Hangout Server | !help for a list of commands", {type: "PLAYING"});
 });
 
 bot.on('error', error => { console.log(error) });
