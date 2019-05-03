@@ -37,9 +37,9 @@ bot.on("message", async message => {
   });
 
 bot.on('guildMemberAdd', (guildMember) => {
-  guildMember.addRole(guildMember.guild.roles.find(role => role.name === "Member"));
-
-  guildMember.guild.channels.get("528370309531697173").send(`Welcome <@${guildMember.id}>`);
+    guildMember.addRole(guildMember.guild.roles.find(role => role.name === "Member"));
+  
+    guildMember.sendMessage(`Welcome <@${guildMember.id}> please do ` + `!rules` + ` for a list rules you must obey.`);
 });
 
 //EVENTS
