@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const config = require("./config.json");
-const bot = new Discord.Client();
+const client = new Discord.Client();
 const fs = require("fs");
 const Token = process.env.token;
 let profanities = ["fuck", "nigger", "cunt", "bitch", "asshole", "nigga", "tits", "sex", " https://discord.gg/", "https://", "http://", "porn"];
@@ -38,7 +38,6 @@ bot.on("message", async message => {
 
 bot.on('guildMemberAdd', (guildMember) => {
     guildMember.addRole(guildMember.guild.roles.find(role => role.name === "Member"));
-  
     guildMember.sendMessage(`Welcome <@${guildMember.id}> please do ` + `!rules` + ` for a list rules you must obey.`);
 });
 
@@ -46,7 +45,8 @@ bot.on('guildMemberAdd', (guildMember) => {
 bot.on('ready', async () => {
     console.log(`${bot.user.username} is online on ${bot.guilds.size} server/s!`)
 
-    bot.user.setActivity(`over ${bot.guilds.size} Discord Servers | !help for a list of commands", {type: "WATCHING`});
+    bot.user.setActivity(`over ${bot.guilds.size} Discord Servers | !help for a list of commands`, {type: "WATCHING"});
+    bot.user.setStatus('dnd');
 });
 
 bot.on('error', error => { console.log(error) });
