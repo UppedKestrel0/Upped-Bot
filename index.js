@@ -46,7 +46,7 @@ bot.on('guildMemberAdd', (guildMember) => {
 bot.on('ready', async () => {
     console.log(`${bot.user.username} is online on ${bot.guilds.size} server/s!`)
 
-    bot.user.setActivity("over Discord Servers | !help for a list of commands", {type: "WATCHING"});
+    bot.user.setActivity(`over ${bot.guilds.size} Discord Servers | !help for a list of commands", {type: "WATCHING`});
 });
 
 bot.on('error', error => { console.log(error) });
