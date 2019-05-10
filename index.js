@@ -50,7 +50,6 @@ bot.on('ready', async () => {
     console.log(`${bot.user.username} is online on ${bot.guilds.size} server/s!`)
 
     bot.user.setActivity("over 2 Discord Servers | !help for a list of commands", {type: "WATCHING"});
-    bot.user.setStatus('dnd');
 });
 
 bot.on('error', error => { console.log(error) });
